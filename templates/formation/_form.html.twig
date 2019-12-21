@@ -1,0 +1,24 @@
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                {{ form_start(form) }}
+                    {{ form_row(form.mail, {'label': 'mail'}) }}
+                    {{ form_row(form.name, {'label': 'nom'}) }}
+                    {{ form_row(form.perspective, {'label': 'perspective'}) }}
+                    {{ form_row(form.mode_financement, {'label': 'mode financement'}) }}
+                    {{ form_row(form.address, {'label': 'adresse'}) }}
+                    {{ form_row(form.city, {'label': 'ville'}) }}
+                    {{ form_row(form.postal_code, {'label': 'code postal'}) }}
+                    {{ form_row(form.phone_number, {'label': 'numéro de téléphone'}) }}
+                    {{ form_row(form.date, {'label': 'date de début'}) }}
+                    {{ form_row(form.date_fin, {'label': 'date de fin'}) }}
+                    {{ form_row(form.price, {'label': 'prix'}) }}
+                    {{ form_row(form.diplome, {'label': 'diplômes'}) }}
+
+                    <button class="btn">{{ button_label|default('Save') }}</button>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+</div>

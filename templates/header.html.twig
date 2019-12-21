@@ -1,0 +1,78 @@
+{% extends "base.html.twig" %}
+
+{% block header %}
+<header class="site-navbar" role="banner">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-3 col-xl-2.1">
+          <h1 class="mb-0 site-logo"><a href="{{ path('home') }}" class="text-white h2 mb-0"> <b>Forme-Ation </b> </a></h1>
+      </div>
+      <div class="col-12 col-md-9 d-none d-xl-block">
+        <nav class="site-navigation position-relative text-right" role="navigation">
+          <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+            <li class="{% if current_menu is defined and current_menu == 'home' %}active{% endif %}"><a
+                href="{{ path('home') }}"><span>{% trans %}home{% endtrans %}</span></a></li>
+            <li class="{% if current_menu is defined and current_menu == 'addFormation' %}active{% endif %}"><a
+                href="{{ path('formation_new') }}"><span>{% trans %}AjouterFormation{% endtrans %}</span></a></li>
+            <li class="{% if current_menu is defined and current_menu == 'apropos' %}active{% endif %}"><a
+                href="{{ path('apropos') }}"><span>{% trans %}apropos{% endtrans %}</span></a></li>
+            {% if app.user.roles[0] is defined  and app.user.roles[0] == "role_admin" %}
+            <li class="nav-item dropdown {% if current_menu is defined and current_menu == 'admin' %}active{% endif %}">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Espace Administration
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{{ path('changePassword',{'id': app.user.id}) }}">Changer de mot de passe</a>
+                <a class="dropdown-item" href="{{ path('admin_formation_index') }}">Gérer les formations</a>
+                <a class="dropdown-item" href="{{ path('user_index') }}">Gérer les utilisateurs</a>
+                <a class="dropdown-item" href="{{ path('diplome_index') }}">Gérer les diplômes</a>
+                <a class="dropdown-item" href="{{ path('organization_index') }}">Gérer les organisations</a>
+              </div>
+            </li>
+            {% endif %}
+            {% if app.user.roles[0] is defined and app.user.roles[0] == "role_organizateur" %}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Espace Organization
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{{ path('organization_formation_index') }}">Gérer vos formations</a>
+                <a class="dropdown-item" href="{{ path('changePassword',{'id': app.user.id}) }}">Changer de mot de passe</a>
+              </div>
+            </li>
+
+            {% endif %}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                {% if "en" == app.request.get('_locale') %}
+                <span class="flag-icon flag-icon-us"> </span></a>
+              {% else %}
+              <span class="flag-icon flag-icon-fr"> </span></a>
+              {% endif %}
+
+              {% if current_menu is defined %}
+              <div class="dropdown-menu" aria-labelledby="dropdown09">{% if "en" == app.request.get('_locale') %}
+                <a class="dropdown-item" href="{{  path('home', {"_locale": 'fr'}) }}"><span
+                    class="flag-icon flag-icon-fr"> </span> Français</a>
+                {% else %}
+                <a class="dropdown-item" href="{{  path('home', {"_locale": 'en'}) }}"><span
+                    class="flag-icon flag-icon-us"> </span> English</a>
+                {% endif %}
+
+              </div>
+              {% endif %}
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#"
+          class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+    </div>
+  </div>
+  </div>
+</header>
+
+{% endblock %}

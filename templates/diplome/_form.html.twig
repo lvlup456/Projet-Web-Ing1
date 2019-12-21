@@ -1,0 +1,14 @@
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                {{ form_start(form) }}
+                    {{ form_row(form.name, {'label': 'Nom'}) }}
+                    {{ form_row(form.domaine, {'label': 'Domaine'}) }}
+
+                <button class="btn">{{ button_label|default('Créer') }}</button>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+</div>

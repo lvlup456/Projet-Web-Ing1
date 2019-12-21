@@ -1,0 +1,6 @@
+{{ form_start(form) }}
+    {{ form_row(form.name, {'label': 'Nom'}) }}
+    {{ form_row(form.first_name, {'label': 'Prénom'}) }}
+    {{ form_row(form.email, {'label': 'Email'}) }}
+    <button class="btn">{{ button_label|default('Créer') }}</button>
+{{ form_end(form) }}

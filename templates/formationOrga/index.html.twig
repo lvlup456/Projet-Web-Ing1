@@ -1,0 +1,78 @@
+{% extends 'header.html.twig' %}
+
+{% block title %}Vos Formations{% endblock %}
+
+{% block body %}
+
+
+<div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(/images/inscription.jpg);"
+    data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-10" data-aos="fade-up" data-aos-delay="400">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <h1>Index de formations</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-6 mb-5">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Diplôme</th>
+                            <th>Perspective</th>
+                            <th>Mode de financement</th>
+                            <th>Adresse</th>
+                            <th>Ville</th>
+                            <th>Code Postal</th>
+                            <th>Numéro de téléphone </th>
+                            <th>Date de début</th>
+                            <th>Date de fin</th>
+                            <th>Prix</th>
+                            <th>Nombre d'inscrits</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for formation in formations %}
+                        <tr>
+                            <td>{{ formation.name }}</td>
+                            <td>{{ formation.diplome.name }}</td>
+                            <td>{{ formation.perspective }}</td>
+                            <td>{{ formation.modeFinancement }}</td>
+                            <td>{{ formation.address }}</td>
+                            <td>{{ formation.city }}</td>
+                            <td>{{ formation.postalCode }}</td>
+                            <td>{{ formation.phoneNumber }}</td>
+                            <td>{{ formation.date ? formation.date|date('Y-m-d H:i:s') : '' }}</td>
+                            <td>{{ formation.dateFin ? formation.dateFin|date('Y-m-d H:i:s') : '' }}</td>
+                            <td>{{ formation.price }}</td>
+                            <td>{{ formation.inscrits|length }}</td>
+
+                            <td>
+                                <a href="{{ path('organization_formation_show', {'id': formation.id}) }}">Voir</a>
+                            </td>
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td colspan="14">Pas de formation</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+    {% endblock %}

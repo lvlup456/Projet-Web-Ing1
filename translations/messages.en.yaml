@@ -1,0 +1,49 @@
+home: Home
+register: Register
+login: Sign in
+find: Find
+typed_word1: a formation
+typed_word2: a sport
+placeholder_home: What are you looking for?
+place: Place
+search: Search
+category_title: Categories
+category_1: Coaching
+category_2: Natation
+category_3: Swimming
+category_4: Educator
+category_5: Team sport
+category_6: Individual sport
+firstname: First Name
+lastname: Last Name
+email: Email
+age: Age
+password: Password
+address: Address
+town: Town
+zipcode: Zip code
+phone: Phone number
+addform: Adding training courses
+apropos: About
+apropos_titre_1: About us
+apropos_titre_2: Team
+admin: Admin
+apropos_text_1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed viverra lorem. Aliquam erat volutpat. Nam convallis congue mollis. Cras at convallis nisl, sed rhoncus quam. Mauris turpis nibh, interdum at ex ac, placerat egestas velit. Etiam vitae leo arcu. Mauris at eros suscipit, laoreet arcu non, vulputate ipsum. Mauris posuere risus in euismod interdum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque ut porta ligula, vel porttitor odio.
+apropos_text_2: Sed vel nulla sodales, egestas neque in, commodo lacus. Praesent venenatis, arcu sed pretium lobortis, massa felis iaculis elit, nec pellentesque quam sem ac arcu. In pharetra convallis tempor. Nam sit amet aliquet purus. In dapibus massa quam, sit amet molestie lectus congue vel. Integer mauris leo, rutrum vestibulum mauris ullamcorper, dignissim tincidunt arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam id turpis id erat pretium finibus non id libero. Etiam placerat augue mi, eu congue risus varius quis. Curabitur nec ex sed sapien vulputate hendrerit. Pellentesque eleifend ante vel metus facilisis, vitae dictum tellus vulputate. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam ut est suscipit, auctor lorem eget, accumsan elit. Vestibulum vulputate nisi sed luctus ultricies.
+apropos_text_3: Vestibulum gravida in nibh in bibendum. Nam convallis porta auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum convallis nibh metus, in consectetur elit luctus sit amet. Nam vulputate porttitor suscipit. Nulla sit amet tellus et lorem tempor viverra nec convallis metus. Pellentesque congue enim neque, quis sagittis tellus dignissim at. Duis pretium pellentesque nulla vitae viverra. Duis sagittis vehicula orci in volutpat. Proin finibus finibus volutpat. Sed quis accumsan nisl. Praesent in ligula odio. Donec vel magna vel orci congue dapibus vel vitae libero. Nulla orci mi, rutrum ut lectus eget, elementum suscipit metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+apropos_text_4: Interdum et malesuada fames ac ante ipsum primis in faucibus. In condimentum est orci, sit amet tristique nibh euismod quis. Cras euismod vestibulum eros in ornare. Quisque et lorem finibus, iaculis nisi eleifend, euismod dolor. Quisque at nibh vehicula, euismod risus quis, lobortis mi. Mauris at scelerisque lectus. In hac habitasse platea dictumst.
+apropos_text_5: Sed ornare dui augue, nec luctus metus lacinia at. Nulla sapien erat, imperdiet sed leo vitae, hendrerit congue tellus. Integer non augue varius ligula dapibus lobortis. Nulla laoreet bibendum tempus. Ut aliquet blandit laoreet. Vivamus ante enim, faucibus sit amet dictum laoreet, egestas et elit. Mauris auctor faucibus nisl ac congue. Nam luctus sit amet risus id tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin quis facilisis ante, non tempor nisl. Vivamus diam orci, dapibus ut purus nec, scelerisque tristique orci. Nam at urna eget quam vulputate vestibulum vitae laoreet enim. Donec ullamcorper ligula metus, at rutrum odio cursus quis. Aenean sollicitudin elit at orci pellentesque mattis. Sed laoreet libero non dolor ultrices, id imperdiet risus viverra.
+admin_titre: A traduire
+admin_text: A traduire
+done_by: Done by
+departement: Choose your zone
+1etape : 1st step 
+2etape : 2nd step 
+3etape : 3rd step 
+chooseSport : Choose your sport
+needtochoose : You need to choose a category !
+chooseForm : Choose your formation
+noFormCat : No formation in this category !
+needtochooseF : You need to choose a category !
+AjouterFormation : Add formation
+Search: Search

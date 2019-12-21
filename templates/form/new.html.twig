@@ -1,0 +1,47 @@
+{% extends "header.html.twig" %}
+
+{% block title %}New Formation{% endblock %}
+
+{% block body %}
+
+<div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(/images/formations.jpg);"
+    data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-10" data-aos="fade-up" data-aos-delay="400">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <h1>Création d'une nouvelle formation</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row">
+        
+          
+                {{ form_start(form) }}
+
+                    {{ form_row(form.mail, {'label': 'mail'}) }}
+                    {{ form_row(form.name, {'label': 'nom'}) }}
+                    {{ form_row(form.perspective, {'label': 'perspective'}) }}
+                    {{ form_row(form.mode_financement, {'label': 'mode financement'}) }}
+                    {{ form_row(form.address, {'label': 'adresse'}) }}
+                    {{ form_row(form.city, {'label': 'ville'}) }}
+                    {{ form_row(form.postal_code, {'label': 'code postal'}) }}
+                    {{ form_row(form.phone_number, {'label': 'numéro de téléphone'}) }}
+                    {{ form_row(form.date, {'label': 'date de début'}) }}
+                    {{ form_row(form.date_fin, {'label': 'date de fin'}) }}
+                    {{ form_row(form.price, {'label': 'prix'}) }}
+                    {{ form_row(form.diplome, {'label': 'diplômes'}) }}
+
+                    <button class="btn">{{ button_label|default('Save') }}</button>
+                {{ form_end(form) }}
+        </div>
+    </div>
+</div>
+{% endblock %}

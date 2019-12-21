@@ -1,0 +1,106 @@
+{% block all %}
+    <!DOCTYPE html>
+    <html>
+    <div class="site-wrap">
+        <div class="site-mobile-menu">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+
+        <head>
+            <script src="/js/jquery-3.3.1.min.js"></script>
+            <script src="/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="/js/jquery-ui.js"></script>
+            <script src="/js/popper.min.js"></script>
+            <script src="/js/bootstrap.min.js"></script>
+            <script src="/js/owl.carousel.min.js"></script>
+            <script src="/js/jquery.stellar.min.js"></script>
+            <script src="/js/jquery.countdown.min.js"></script>
+            <script src="/js/jquery-jvectormap-2.0.3.min.js"></script>
+            <script src="/js/jquery.magnific-popup.min.js"></script>
+            <script src="/js/jquery-jvectormap-fr-merc.js"></script>
+            <script src="/js/bootstrap-datepicker.min.js"></script>
+            <script src="{{ absolute_url(asset('/js/aos.js')) }}"></script>
+            <script src="/js/rangeslider.min.js"></script>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+            <title>{% block title %}Welcome!{% endblock %}</title>
+            {% block stylesheets %}
+                <link rel="shortcut icon" href=" {{ asset('ftco-32x32.png') }}">
+                <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
+                <link rel="stylesheet" href="/fonts/icomoon/style.css">
+                <link rel="stylesheet" href="/css/bootstrap.min.css">
+                <link rel="stylesheet" href="/css/magnific-popup.css">
+                <link rel="stylesheet" href="/css/jquery-ui.css">
+                <link rel="stylesheet" href="/css/owl.carousel.min.css">
+                <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+                <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css">
+                <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
+                <link rel="stylesheet" href="/css/aos.css">
+                <link rel="stylesheet" href="/css/rangeslider.css">
+                <link rel="stylesheet" href="/css/jquery-jvectormap-2.0.3.css">
+                <link rel="stylesheet" href="/css/style.css">
+                <link rel="stylesheet" href="/css/leaflet.css" />
+                <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+                      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+                      crossorigin=""/>
+            {% endblock %}
+        </head>
+        <body>
+        {% block header %}{% endblock %}
+        {% block body %}{% endblock %}
+        {% block javascripts %}
+
+            <script src="/js/typed.js"></script>
+            <script src="/js/leaflet.js"></script>
+            <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+                    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+                    crossorigin=""></script>
+            <script src="/js/map-selector.js"></script>
+            <script>
+                var typed = new Typed('.typed-words', {
+                    strings: ["{% trans %}typed_word1{% endtrans %}","{% trans %}typed_word2{% endtrans %}"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                });
+            </script>
+            <script src="/js/main.js"></script>
+        {% endblock %}
+        </body>
+    </div>
+    <div class="row pt-1 mt-1" style="margin-right: 0px" >
+        <div class="col-12 text-md-center text-left" style="background: #283D6B">
+            <p>
+                <strong class="text-white">&copy; 2019 Forme-Ation</strong>
+            <div >
+                <a data-site="linkedin" class="ssba_linkedin_share ssba_share_link" href="http://google.com" target="&quot;_blank&quot;">
+                    <img src="https://www.marieemmanuellehamon.fr/blog/wp-content/plugins/simple-share-buttons-adder/buttons/somacro/linkedin.png" style="width: 36px;" title="LinkedIn" class="ssba ssba-img" alt="Share on LinkedIn">
+                </a>
+                <a data-site="" class="ssba_twitter_share" href="http://google.com" target="&quot;_blank&quot;">
+                    <img src="https://www.marieemmanuellehamon.fr/blog/wp-content/plugins/simple-share-buttons-adder/buttons/somacro/twitter.png" style="width: 36px;" title="Twitter" class="ssba ssba-img" alt="Tweet about this on Twitter">
+                </a>
+                <a data-site="" class="ssba_facebook_share" href="http://google.com" target="_blank">
+                    <img src="https://www.marieemmanuellehamon.fr/blog/wp-content/plugins/simple-share-buttons-adder/buttons/somacro/facebook.png" style="width: 36px;" title="Facebook" class="ssba ssba-img" alt="Share on Facebook">
+                </a>
+                <a data-site="reddit" class="ssba_reddit_share" href="http://google.com " target="&quot;_blank&quot;">
+                    <img src="https://www.marieemmanuellehamon.fr/blog/wp-content/plugins/simple-share-buttons-adder/buttons/somacro/reddit.png" style="width: 36px;" title="Reddit" class="ssba ssba-img" alt="Share on Reddit">
+                </a>
+            </div>
+                <a href="{{ path('app_login') }}"><span>{% trans %}organization_space{% endtrans %}</span></a>
+            <br >
+            <span class="text-white">{% trans %}done_by{% endtrans %} </span><a href="http://capeisti.fr">CAP EISTI</a>
+            </p>
+        </div>
+    </div>
+    </html>
+{% endblock %}
