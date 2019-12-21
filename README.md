@@ -20,4 +20,3 @@ php -S 127.0.0.1:8000 -t public/
 
 4/Acceder au serveur, se rendre sur 127.0.0.1:8000
 
-# Projet-Web-Ing1
